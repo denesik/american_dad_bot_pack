@@ -1,0 +1,1 @@
+bin\ad_bot.exe --emulator_type "nox" --config_file "config.txt"
