@@ -24,3 +24,4 @@ config.json
 /Bluestacks_netlog.txt
 /NoxPlayer1_netlog.txt
 /set_token.cmd
+*.blacklist
