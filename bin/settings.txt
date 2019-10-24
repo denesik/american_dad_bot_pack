@@ -1,5 +1,5 @@
 {	
-	"system_version": "1.0.0_c",
+	"system_version": "1.0.0_d",
 	"debug_log": 0, 
 	
 	
