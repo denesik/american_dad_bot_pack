@@ -1,7 +1,5 @@
 {	
-	"system_version": "1.0.0_e",
 	"debug_log": 0, 
-	
 	
 	// Image capture mode from the emulator.
 	// 0 - should work on all computers. It is necessary that the emulator window is on top of all windows.
@@ -22,9 +20,6 @@
 	// The interval through which the screen is scanned in ms
 	// Интервал, через который сканируется экран в мс
 	"pause": 500, 						
-	
-	"host": "37.228.116.78",
-	"port": 33660,
 
 	
 	// How much time is available for one state in ms.
