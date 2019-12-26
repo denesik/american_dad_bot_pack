@@ -1,0 +1,467 @@
+msgid ""
+msgstr ""
+"Proje-ID Sürümü: \n"
+"POT-oluşturma-Tarih: 2019-12-02 06:25+0300\n"
+"PO Revizyon Tarihi: 2019-12-02 06:43+0300\n"
+"Son Çevirmen: \n"
+"Dil Ekibi: \n"
+"Dil: ru\n"
+"MIME sürümü: 1.0\n"
+"İçerik Türü: text/plain; charset=UTF-8\n"
+"İçerik Aktarımı-Kodlama: 8bit\n"
+"X-Jeneratör: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ../../src/editor\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: _\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: EditorAdv.cpp:14
+msgid "advertising_apple"
+msgstr "Elma biterse reklamları görüntüleme"
+
+#: EditorAdv.cpp:20
+msgid "advertising_adv_chest"
+msgstr "Reklam göğsünde reklam görüntüleme"
+
+#: EditorAdv.cpp:26
+msgid "advertising_daily_quests"
+msgstr "Günlük işlerdeki reklamları görüntüleme"
+
+#: EditorAdv.cpp:32
+msgid "advertising_arena"
+msgstr "Arenada reklam görüntüleme"
+
+#: EditorAdv.cpp:38
+msgid "advertising_portal"
+msgstr "Portalda reklamları görüntüleme"
+
+#: EditorAdv.cpp:44
+msgid "advertising_train_room"
+msgstr "Eğitim odasında reklam görüntüleme"
+
+#: EditorAdv.cpp:50
+msgid "advertising_event"
+msgstr "Etkinlik reklamlarını görüntüleme"
+
+#: EditorAdv.cpp:56
+msgid "advertising_donkey"
+msgstr "Eşek reklamları görüntüleme"
+
+#: EditorApp.cpp:87
+msgid "bot_name"
+msgstr "Hustle Castle Bot"
+
+#: EditorArena.cpp:15 EditorBay.cpp:14 EditorEnemy.cpp:14 EditorEvent.cpp:13
+#: EditorInvasion.cpp:14 EditorPortal.cpp:14
+msgid "enable"
+msgstr "Dahil etmek"
+
+#: EditorArena.cpp:25
+msgid "algorithm_file"
+msgstr "Algoritma"
+
+#: EditorArena.cpp:48
+msgid "arena_ticket"
+msgstr "Düzen"
+
+#: EditorArena.cpp:54
+msgid "arena_ticket_0"
+msgstr "Elma için"
+
+#: EditorArena.cpp:55
+msgid "arena_ticket_1"
+msgstr "biletler için"
+
+#: EditorArena.cpp:56
+msgid "arena_ticket_2"
+msgstr "Elma, biletler"
+
+#: EditorArena.cpp:57
+msgid "arena_ticket_3"
+msgstr "Biletler, elma"
+
+#: EditorArena.cpp:69
+msgid "arena_my_power_scale"
+msgstr "Güç çarpanı"
+
+#: EditorArena.cpp:84
+msgid "arena_check_mail"
+msgstr "Posta almak"
+
+#: EditorArena.cpp:91
+msgid "arena_invite"
+msgstr "Klana davet et"
+
+#: EditorArena.cpp:100
+msgid "arena_stats"
+msgstr "İstatistik"
+
+#: EditorArena.cpp:106
+msgid "arena_stats_0"
+msgstr "Devam etmiyor"
+
+#: EditorArena.cpp:107
+msgid "arena_stats_1"
+msgstr "Kısa"
+
+#: EditorArena.cpp:108
+msgid "arena_stats_2"
+msgstr "Tam"
+
+#: EditorArena.cpp:119
+msgid "arena_ticket_buy"
+msgstr "Elmas için bilet satın alın"
+
+#: EditorBay.cpp:23 EditorEnemy.cpp:57 EditorEvent.cpp:22 EditorInvasion.cpp:23
+#: EditorPortal.cpp:40
+msgid "battle_magic_health_less"
+msgstr "Sağlık daha az ise büyü kullanın"
+
+#: EditorBay.cpp:36 EditorEnemy.cpp:70 EditorEvent.cpp:34 EditorInvasion.cpp:36
+#: EditorPortal.cpp:53
+msgid "battle_relic"
+msgstr "Yadigarı kullan"
+
+#: EditorBay.cpp:43
+msgid "bay_apple"
+msgstr "Elma geçmek"
+
+#: EditorBay.cpp:49
+msgid "bay_diamond"
+msgstr "Elmas ile  geçmek"
+
+#: EditorConditions.cpp:11
+msgid "execution_conditions"
+msgstr "Yürütme koşulları"
+
+#: EditorConditions.cpp:24
+msgid "conditions_time"
+msgstr "Kurşun zamanı"
+
+#: EditorConditions.cpp:33
+msgid "conditions_time_begin"
+msgstr "С"
+
+#: EditorConditions.cpp:39 EditorConditions.cpp:52 EditorConditions.cpp:55
+#: EditorConditions.cpp:58 EditorConditions.cpp:102 EditorConditions.cpp:355
+#: EditorConditions.cpp:426
+msgid "everyday"
+msgstr "Her gün"
+
+#: EditorConditions.cpp:40 EditorConditions.cpp:63 EditorConditions.cpp:335
+msgid "monday"
+msgstr "pazartesi"
+
+#: EditorConditions.cpp:41 EditorConditions.cpp:64 EditorConditions.cpp:336
+msgid "tuesday"
+msgstr "salı"
+
+#: EditorConditions.cpp:42 EditorConditions.cpp:65 EditorConditions.cpp:337
+msgid "wednesday"
+msgstr "carşamba"
+
+#: EditorConditions.cpp:43 EditorConditions.cpp:66 EditorConditions.cpp:338
+msgid "thursday"
+msgstr "perşembe"
+
+#: EditorConditions.cpp:44 EditorConditions.cpp:67 EditorConditions.cpp:339
+msgid "friday"
+msgstr "Cuma"
+
+#: EditorConditions.cpp:45 EditorConditions.cpp:68 EditorConditions.cpp:340
+msgid "saturday"
+msgstr "Cumartesi"
+
+#: EditorConditions.cpp:46 EditorConditions.cpp:69 EditorConditions.cpp:341
+msgid "sunday"
+msgstr "Pazar"
+
+#: EditorConditions.cpp:96
+msgid "conditions_time_end"
+msgstr "İle"
+
+#: EditorConditions.cpp:128
+msgid "conditions_apple"
+msgstr "Elmalar"
+
+#: EditorConditions.cpp:138 EditorConditions.cpp:174 EditorConditions.cpp:210
+#: EditorConditions.cpp:277 EditorConditions.cpp:293 EditorConditions.cpp:309
+#: EditorConditions.cpp:379 EditorConditions.cpp:392 EditorConditions.cpp:405
+msgid "conditions_<"
+msgstr "Daha az"
+
+#: EditorConditions.cpp:139 EditorConditions.cpp:175 EditorConditions.cpp:211
+#: EditorConditions.cpp:279 EditorConditions.cpp:295 EditorConditions.cpp:311
+#: EditorConditions.cpp:381 EditorConditions.cpp:394 EditorConditions.cpp:407
+msgid "conditions_>"
+msgstr "Fazla"
+
+#: EditorConditions.cpp:164
+msgid "conditions_gold"
+msgstr "Altın"
+
+#: EditorConditions.cpp:200
+msgid "conditions_mana"
+msgstr "Mana"
+
+#: EditorConditions.cpp:236
+msgid "conditions_probability"
+msgstr "Olasılık"
+
+#: EditorEnemy.cpp:23
+msgid "enemy_my_power_scale"
+msgstr "Üst güç çarpanı"
+
+#: EditorEnemy.cpp:40
+msgid "enemy_my_power_scale_min"
+msgstr "Alt güç çarpanı"
+
+#: EditorEnemy.cpp:77 EditorEvent.cpp:39 EditorInvasion.cpp:43
+#: EditorPortal.cpp:67
+msgid "ignore_warning_hp"
+msgstr "Eksik sağlık uyarısını Yoksay"
+
+#: EditorEnemy.cpp:83
+msgid "advertising_battle"
+msgstr "Savaşı kaybederseniz reklamları izleyin"
+
+#: EditorEvent.cpp:44
+msgid "event_buy"
+msgstr "Elmas için kart geçmek"
+
+#: EditorFrame.cpp:28
+msgid "update_not_required"
+msgstr "Güncelleme gerekli değil"
+
+#: EditorFrame.cpp:28
+msgid "update_available"
+msgstr "Güncelleme gerekli"
+
+#: EditorFrame.cpp:33
+msgid "update"
+msgstr "Yenileme"
+
+#: EditorFrame.cpp:44
+msgid "language"
+msgstr "Dil"
+
+#: EditorFrame.cpp:67
+msgid "arena"
+msgstr "Arena"
+
+#: EditorFrame.cpp:68
+msgid "invasion"
+msgstr "Salgınlar - istila"
+
+#: EditorFrame.cpp:69
+msgid "enemy"
+msgstr "Düşmanlar"
+
+#: EditorFrame.cpp:70
+msgid "portal"
+msgstr "Portal"
+
+#: EditorFrame.cpp:71
+msgid "bay"
+msgstr "Koy"
+
+#: EditorFrame.cpp:72
+msgid "advertising"
+msgstr "Reklam"
+
+#: EditorFrame.cpp:73
+msgid "resource"
+msgstr "Kaynak"
+
+#: EditorFrame.cpp:74
+msgid "event"
+msgstr "Etkinlik"
+
+#: EditorFrame.cpp:75
+msgid "other"
+msgstr "Diğer"
+
+#: EditorFrame.cpp:76 EditorProgram.cpp:16 EditorSettings.cpp:9
+msgid "settings"
+msgstr "Ayarlar"
+
+#: EditorFrame.cpp:77
+msgid "log"
+msgstr "Günlük"
+
+#: EditorFrame.cpp:93
+msgid "status_launched"
+msgstr "Başlatıldı"
+
+#: EditorFrame.cpp:93
+msgid "status_stopped"
+msgstr "Durduruldu"
+
+#: EditorFrame.cpp:98
+msgid "emulator_id"
+msgstr "Emülatör kimliği:"
+
+#: EditorFrame.cpp:109
+msgid "emulator_name"
+msgstr "Emülatör adı:"
+
+#: EditorFrame.cpp:120
+msgid "start"
+msgstr "Başlama"
+
+#: EditorFrame.cpp:194
+msgid "Select language"
+msgstr "Dil seç"
+
+#: EditorOther.cpp:13
+msgid "program_start_cw"
+msgstr "Çalıştırmak olması savaş"
+
+#: EditorOther.cpp:18
+msgid "program_goto_cw"
+msgstr "Bir ara olması savaş"
+
+#: EditorPortal.cpp:23
+msgid "portal_my_power_scale"
+msgstr "Güç çarpanı"
+
+#: EditorPortal.cpp:60
+msgid "battle_portal_resurrection"
+msgstr "Dirilişi kullan"
+
+#: EditorPortal.cpp:73
+msgid "portal_buy"
+msgstr "Elmaslar için elma satın alın"
+
+#: EditorProgram.cpp:31
+msgid "program_collect"
+msgstr "Modu çalıştırdıktan sonra kaynakları toplayın"
+
+#: EditorProgram.cpp:39
+msgid "program_pause"
+msgstr "Modu çalıştırdıktan sonra Duraklat (dakika)"
+
+#: EditorResource.cpp:16
+msgid "request_type"
+msgstr "Kaynakları isteyin"
+
+#: EditorResource.cpp:23
+msgid "request_type_0"
+msgstr "Elmalar"
+
+#: EditorResource.cpp:24
+msgid "request_type_1"
+msgstr "Altın"
+
+#: EditorResource.cpp:25
+msgid "request_type_2"
+msgstr "Mana"
+
+#: EditorResource.cpp:34
+msgid "program_send_gift"
+msgstr "Hediye gönder"
+
+#: EditorResource.cpp:40
+msgid "program_take_gift"
+msgstr "Hediyeler almak"
+
+#: EditorResource.cpp:46
+msgid "program_daily_chest"
+msgstr "Günlük sandığı aç"
+
+#: EditorSettings.cpp:19
+msgid "blacklist_hours"
+msgstr "kara liste"
+
+#: EditorSettings.cpp:34
+msgid "pause"
+msgstr "duraklamak"
+
+#: EditorSettings.cpp:49
+msgid "short_state_timeout"
+msgstr "kısa durum zaman aşımı"
+
+#: EditorSettings.cpp:64
+msgid "uzun durum zaman aşımı"
+msgstr ""
+
+#: EditorSettings.cpp:79
+msgid "arena_find_timeout"
+msgstr "arena zaman aşımı bul"
+
+#: EditorSettings.cpp:94
+msgid "recovery_state_timeout"
+msgstr "kurtarma durumu zaman aşımı"
+
+#: EditorSettings.cpp:109
+msgid "emulator_stop_time"
+msgstr ""
+
+#: EditorSettings.cpp:124
+msgid "emulator_start_time"
+msgstr ""
+
+#: EditorSettings.cpp:140
+msgid "disable_recovery"
+msgstr ""
+
+#: EditorSettings.cpp:155
+msgid "open_timeout"
+msgstr ""
+
+#: EditorSettings.cpp:170
+msgid "start_program_pause"
+msgstr ""
+
+#: EditorSettings.cpp:185
+msgid "another_device_timeout"
+msgstr ""
+
+#: EditorSettings.cpp:200
+msgid "advertising_timeout"
+msgstr ""
+
+#: LangSelector.cpp:48
+msgid "ok"
+msgstr "ок"
+
+msgid "note_"
+msgstr " "
+
+msgid "note_arena"
+msgstr " "
+
+msgid "note_invasion"
+msgstr " "
+
+msgid "note_enemy"
+msgstr " "
+
+msgid "note_portal"
+msgstr " "
+
+msgid "note_bay"
+msgstr " "
+
+msgid "note_advertising"
+msgstr "not_kaykagı "
+
+msgid "note_resource"
+msgstr " "
+
+msgid "note_event"
+msgstr " not olayo"
+
+msgid "note_other"
+msgstr " "

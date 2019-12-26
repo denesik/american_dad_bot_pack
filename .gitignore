@@ -22,6 +22,9 @@ config.json
 /NoxPlayer_netlog.txt
 /bin/authcache.bin
 /Bluestacks_netlog.txt
-/NoxPlayer1_netlog.txt
 /set_token.cmd
 *.blacklist
+/config_editor.txt
+/editor.cfg
+/bin/timeleft.txt
+/bin/config_editor.txt

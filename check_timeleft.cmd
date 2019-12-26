@@ -1,0 +1,1 @@
+bin\ad_bot.exe --additionally "timeleft"

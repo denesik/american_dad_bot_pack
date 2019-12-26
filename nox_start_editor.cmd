@@ -1,0 +1,1 @@
+bin\ad_bot.exe --emulator_type "nox" --emulator_id "NoxPlayer" --emulator_name "NoxPlayer" --config_file "config_editor.txt"
