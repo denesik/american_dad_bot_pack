@@ -28,12 +28,10 @@
 
 def PrintPowerData(data)
 {
-	print("++++++++++++++++++++++")
 	for (var i = 0; i < data.size(); ++i) 
 	{
-		print(data[i].pos.to_string() + " " + data[i].is_me.to_string() + " " + data[i].my_power.to_string() + " " + data[i].other_power.to_string() + " " + data[i].is_available.to_string() + " " + data[i].battle_state.to_string() + " " + data[i].blacklist_count.to_string())
+		log_print(data[i].pos.to_string() + " " + data[i].is_me.to_string() + " " + data[i].my_power.to_string() + " " + data[i].other_power.to_string() + " " + data[i].is_available.to_string() + " " + data[i].battle_state.to_string() + " " + data[i].blacklist_count.to_string())
 	}
-	print("----------------------")
 }
 
 def TestSetInputPhaseOne()
@@ -321,203 +319,34 @@ def GetPhase3(data)
 
 def main(power_data, phase)
 {
+	var reserve_choise = false
 	var scaled_power_data = GetScaled(power_data)
 	
 	//PrintPowerData(scaled_power_data)
 	if (phase == 1)
 	{
-		var all = GetAllWithoutBlacklistSorted(scaled_power_data)
-		var weak = GetWeakSorted(scaled_power_data)
-		
-		// Удаляем из списка всех доступных самого слабого.
-		if (weak.size() != 0)
+		// Если есть сильные противники
+		if (CountStrong(scaled_power_data) > 0)
 		{
-			for (var i = 0; i < all.size(); ++i) 
+			// Пытаемся убиться об самого сильного.
+			var list = GetAllSorted(scaled_power_data);
+			if (list.size() != 0)
 			{
-				if (all[i].pos == weak[0].pos)
-				{
-					all.erase_at(i)
-					break
-				}
+				var ret_val = list[list.size() - 1].pos
+				return ret_val
 			}
-		}
-		
-		if (all.size() != 0)
-		{
-			// атакуем почти самого слабого.
-			// оставляем самого слабого на 5 фазу.
-			var ret_val = all[0].pos
-			return ret_val
 		}
 	}	
 	
 	if (phase == 2 || phase == 3 || phase == 4 || phase == 5)
 	{
-		if (CountDefeat(scaled_power_data) > 0)
+		// Список слабых противников выше меня, которых можно убить на данный момент.
+		// Атакуем самого слабого выше меня.
+		var list = GetWeakAboveSorted(scaled_power_data)
+		if (list.size() != 0)
 		{
-			// Если мы об кого то убились.
-			
-			// Список слабых противников выше меня, которых можно убить на данный момент.
-			// Атакуем самого слабого выше меня.
-			var list = GetWeakAboveSorted(scaled_power_data)
-			if (list.size() != 0)
-			{
-				var ret_val = list[0].pos
-				return ret_val
-			}
-		}
-		else
-		{
-			// Если много сильных (3+ для 10, 4+ для 15), играем вниз, вверх, вверх, вверх, вверх
-			if (CountStrong(scaled_power_data) > (scaled_power_data.size() + 1) / 5)
-			{
-				// Список слабых противников выше меня, которых можно убить на данный момент.
-				// Атакуем самого слабого выше меня.
-				var list = GetWeakAboveSorted(scaled_power_data)
-				if (list.size() != 0)
-				{
-					var ret_val = list[0].pos
-					return ret_val
-				}
-			}
-			else
-			{
-				if (phase == 3)
-				{
-					var me_pos = FindMe(scaled_power_data)
-					// Если мы сильно внизу, скорей всего будет бой вниз вниз вверх вверх вверх, атакуем вверх.
-					if (me_pos > (scaled_power_data.size() / 2 + 1)) // (8 или 5)
-					{
-						// Атакуем самого слабого.
-						var opps = GetWeakAboveSorted(scaled_power_data);
-						if (opps.size() != 0)
-						{
-							var ret_val = opps[0].pos;
-							return ret_val
-						}
-					}
-					else
-					{
-						var opps = GetPhase3(scaled_power_data)
-						//PrintPowerData(opps)
-						if (opps.size() != 0)
-						{
-							// Тут мы атакуем самого сильного из слабых ниже меня, что бы получить чуть меньше очков.
-							var ret_val = opps[opps.size() - 1].pos;
-							return ret_val
-						}
-					}
-				}
-				
-				if (phase == 4)
-				{
-					// получаем слабых выше меня, которые могут убить кого то выше себя.
-					var list = GetWeakAboveMeBigSorted(scaled_power_data)
-					if (list.size() >= 2)
-					{
-						// Если таких много, бьем самого слабого выше меня.
-						// Т.е. тут как минимум 2 противника могут сыграть вверх на 4 фазе.
-						// Список слабых противников выше меня, которых можно убить на данный момент.
-						var opps = GetWeakAboveSorted(scaled_power_data)
-						if(opps.size() != 0)
-						{
-							var ret_val = opps[0].pos
-							return ret_val
-						}
-					}
-					else
-					{
-						if (list.size() == 1)
-						{
-							// Тут 1 противник, который может сыграть вверх на 4 фазе.
-							// Список слабых противников выше меня, которых можно убить на данный момент.
-							var opps = GetWeakAboveSorted(scaled_power_data)
-							for (var i = 0; i < opps.size(); ++i) 
-							{
-								if (opps[i].pos == list[0].pos)
-								{
-									opps.erase_at(i)
-									break
-								}
-							}
-							
-							// Атакуем самого слабого выше меня, но не того, который может атаковать вверх.
-							if (opps.size() != 0)
-							{
-								var ret_val = opps[0].pos
-								return ret_val
-							}
-						}
-					}
-					
-					// Тут нет противников выше меня, которые могут атаковать вверх.
-					// Список слабых противников выше меня, которые не могут убить кого то выше себя.
-					
-					var opps1 = GetWeakAboveSorted(scaled_power_data)
-					for (var i = 0; i < opps1.size(); ++i) 
-					{
-						if (opps1[i].pos == 0)
-						{
-							opps1.erase_at(i)
-							break
-						}
-					}
-					// Атакуем почти самого слабого. 
-					// Если кто то ниже меня атакует самого слабого, он получит больше очков чем я и будет выше меня на 5-ой фазе, его можно будет атаковать.
-					if (opps1.size() != 0)
-					{
-						var ret_val = opps1[0].pos
-						return ret_val
-					}
-					
-					// Если сверху только один слабый, атакуем его.
-					var opps2 = GetWeakAboveSorted(scaled_power_data);
-					if (!opps2.empty())
-					{
-						var ret_val = opps2[0].pos;
-						return ret_val
-					}
-				}	
-				
-				if (phase == 5)
-				{
-					// Тут просто атакуем самого слабого.
-					var opps = GetWeakAboveSorted(scaled_power_data);
-					if (opps.size() != 0)
-					{
-						var ret_val = opps[0].pos;
-						return ret_val
-					}
-				}
-			}
-		}
-	}
-	
-	{
-		// У нас не получилось атаковать так, как мы хотели. Атакуем хоть кого-нибудь.
-		// Получаем список слабых ниже меня.
-		// Удаляем из него самого слабого из всех доступных противников.
-		// И атакуем почти самого слабого.
-		var opps = GetWeakBelowSorted(scaled_power_data);
-		if (phase == 1 || phase == 2 || phase == 3)
-		{
-			auto weak = GetWeakSorted(scaled_power_data);
-			if (weak.size() != 0)
-			{
-				for (var i = 0; i < opps.size(); ++i) 
-				{
-					if (opps[i].pos == weak[0].pos)
-					{
-						opps.erase_at(i)
-						break
-					}
-				}
-				if (opps.size() != 0)
-				{
-					var ret_val = opps[0].pos
-					return ret_val
-				}
-			}
+			var ret_val = list[0].pos
+			return ret_val
 		}
 	}
 	
@@ -551,10 +380,11 @@ def main(power_data, phase)
 //var pos = main(power_data, phase)
 //print(pos)
 
+log_print("alg: first_lose")
 PrintPowerData(power_data)
-print(phase)
+//print(phase)
 
 var out_pos = main(power_data, phase)
 SetPosition(out_pos)
-print(out_pos)
+log_print("result pos: " + out_pos.to_string())
 
