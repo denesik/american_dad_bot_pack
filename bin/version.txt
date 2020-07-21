@@ -1,1 +1,1 @@
-{"system_version": "AD_23"}
+{"system_version": "AD_24"}
